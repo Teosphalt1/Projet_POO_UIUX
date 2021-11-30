@@ -1,6 +1,5 @@
 #pragma once
 #include "pch.h"
-//test nicolas je vais le supprimer
 namespace NS_Comp_Data
 {
 	ref class CAD
