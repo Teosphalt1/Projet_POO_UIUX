@@ -1,7 +1,7 @@
 #pragma once
 #include"pch.h"
 #include "CAD.h"
-//test nicolas //ziubviézvdo
+
 NS_Comp_Data::CAD::CAD(void)
 {
 	this->sCnx = "Data Source=LAPTOP-502SFKRC\\MYSQL_THEOPHILE;Initial Catalog=DB_PROJECT;User ID=CNX_PROJET;Password=root";
