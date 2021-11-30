@@ -50,6 +50,7 @@ namespace ProjetV1 {
 	private: System::Windows::Forms::Button^ btn_stock;
 	private: System::Windows::Forms::Button^ btn_to_order;
 	private: System::Windows::Forms::Button^ btn_stats;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 	protected:
 
@@ -82,6 +83,8 @@ namespace ProjetV1 {
 			this->btn_stock = (gcnew System::Windows::Forms::Button());
 			this->btn_to_order = (gcnew System::Windows::Forms::Button());
 			this->btn_stats = (gcnew System::Windows::Forms::Button());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// btn_adresse
@@ -127,7 +130,7 @@ namespace ProjetV1 {
 			// 
 			this->btn_order->BackColor = System::Drawing::Color::MistyRose;
 			this->btn_order->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btn_order.Image")));
-			this->btn_order->Location = System::Drawing::Point(207, 209);
+			this->btn_order->Location = System::Drawing::Point(59, 209);
 			this->btn_order->Name = L"btn_order";
 			this->btn_order->Size = System::Drawing::Size(100, 130);
 			this->btn_order->TabIndex = 3;
@@ -166,7 +169,7 @@ namespace ProjetV1 {
 			// 
 			this->btn_to_order->BackColor = System::Drawing::Color::MistyRose;
 			this->btn_to_order->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btn_to_order.Image")));
-			this->btn_to_order->Location = System::Drawing::Point(59, 209);
+			this->btn_to_order->Location = System::Drawing::Point(207, 209);
 			this->btn_to_order->Name = L"btn_to_order";
 			this->btn_to_order->Size = System::Drawing::Size(100, 130);
 			this->btn_to_order->TabIndex = 7;
@@ -188,12 +191,22 @@ namespace ProjetV1 {
 			this->btn_stats->UseVisualStyleBackColor = false;
 			this->btn_stats->Click += gcnew System::EventHandler(this, &FormMenu::btn_stats_Click);
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(387, 469);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(116, 56);
+			this->pictureBox1->TabIndex = 9;
+			this->pictureBox1->TabStop = false;
+			// 
 			// FormMenu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->ClientSize = System::Drawing::Size(515, 537);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->btn_stats);
 			this->Controls->Add(this->btn_to_order);
 			this->Controls->Add(this->btn_stock);
@@ -204,6 +217,7 @@ namespace ProjetV1 {
 			this->Controls->Add(this->btn_adresse);
 			this->Name = L"FormMenu";
 			this->Text = L"FormMenu";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
