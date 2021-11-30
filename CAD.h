@@ -2,7 +2,6 @@
 #include "pch.h"
 namespace NS_Comp_Data
 {
-	//test victor
 	ref class CAD
 	{
 	private:
