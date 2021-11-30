@@ -2,7 +2,7 @@
 
 String^ NS_Comp_Mappage::MapStaff::SELECT(void)
 {
-	return "SELECT * FROM Staff";
+	return "SELECT * FROM Staff INNER JOIN Adress ON Staff.ID_adress = Adress.ID_adress";
 }
 
 String^ NS_Comp_Mappage::MapStaff::INSERT(void)

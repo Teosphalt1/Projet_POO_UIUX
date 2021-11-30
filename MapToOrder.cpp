@@ -2,7 +2,7 @@
 
 String^ NS_Comp_Mappage::MapToOrder::SELECT(void)
 {
-	return "SELECT * FROM To_order ORDER BY ID_order";
+	return "SELECT To_order.ID_order, To_order.ID_product,To_order.Quantity,Stock.Name from To_order INNER JOIN Stock on To_order.ID_product = Stock.ID_product ORDER BY ID_order";
 }
 
 String^ NS_Comp_Mappage::MapToOrder::INSERT(void)
