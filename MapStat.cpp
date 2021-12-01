@@ -41,3 +41,44 @@ String^ NS_Comp_Mappage::MapStat::STAT8(void)
 	return "SELECT TOP 10 MAX(Name) as 'Name product', AVG(stock.ID_product) as 'Reference', SUM(quantity) as 'Quantity' FROM stock INNER JOIN to_order ON to_order.ID_product=stock.ID_product group by stock.ID_product ORDER BY Quantity ASC";
 }
 
+String^ NS_Comp_Mappage::MapStat::STAT9(void)
+{
+	return "INSERT INTO Stats (stock_value, tva, margin, discount, uknown_brand, result) VALUES ('" + this->stock_value + "','" + this->tva + "', '" + this->margin + "', '" + this->uknown_brand + "', '"+ this->discount +"' ," + this->stock_value + " - " + this->stock_value + "*" + this->tva + "*0.01 - " + this->stock_value + "*" + this->margin + "*0.01 + " + this->stock_value + "*"+ this->discount +"*0.01 - " + this->stock_value + "*" + this->uknown_brand + "*0.01)";
+}
+
+String^ NS_Comp_Mappage::MapStat::SELECT(void)
+{
+	return "SELECT * FROM Stats";
+}
+
+void NS_Comp_Mappage::MapStat::setStock_value(float stock_value)
+{
+	this->stock_value = stock_value;
+}
+void NS_Comp_Mappage::MapStat::setDiscount(float discount)
+{
+	this->discount = discount;
+}
+void NS_Comp_Mappage::MapStat::setTVA(float tva)
+{
+	this->tva = tva;
+}
+void NS_Comp_Mappage::MapStat::setMargin(float margin)
+{
+	this->margin = margin;
+}
+void NS_Comp_Mappage::MapStat::setUknown_brand(float uknown_brand)
+{
+	this->uknown_brand = uknown_brand;
+}
+void NS_Comp_Mappage::MapStat::setResult(float result)
+{
+	this->result = result;
+}
+
+float NS_Comp_Mappage::MapStat::getTva(void) { return this->tva; }
+float NS_Comp_Mappage::MapStat::getMargin(void) { return this->margin; }
+float NS_Comp_Mappage::MapStat::getDiscount(void) { return this->discount; }
+float NS_Comp_Mappage::MapStat::getUknown_brand(void) { return this->uknown_brand; }
+float NS_Comp_Mappage::MapStat::getResult(void) { return this->result; }
+float NS_Comp_Mappage::MapStat::getStock_value(void) { return this->stock_value; }

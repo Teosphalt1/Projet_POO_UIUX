@@ -19,5 +19,7 @@ namespace NS_Comp_Svc
 		Data::DataSet^ stat6(String^);
 		Data::DataSet^ stat7(String^);
 		Data::DataSet^ stat8(String^);
+		void stat9(float, float, float, float, float, float);
+		Data::DataSet^ selectStock(String^);
 	};
 }
