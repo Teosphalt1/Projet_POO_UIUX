@@ -331,7 +331,7 @@ namespace ProjetV1 {
 
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->stat4("RS4L");
+		this->oDs = this->oSvc->stat4("RSL4");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "RSL4";
 	}
