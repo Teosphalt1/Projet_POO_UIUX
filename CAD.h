@@ -12,10 +12,10 @@ namespace NS_Comp_Data
 		SqlClient::SqlDataAdapter^ oDA;
 		DataSet^ oDs;
 	public:
-		CAD(void);
-		DataSet^ getRows(String^, String^);
-		void actionRows(String^);
-		void deleteRows(String^);
-		void updateRows(String^);
+		CAD(void);									//Définition des différentes actions que nous allons réaliser sur notre BDD
+		DataSet^ getRows(String^, String^);			//Permet de récupérer les colonnes d'une table
+		void actionRows(String^);					//Permet d'insérer des éléments d'une table
+		void deleteRows(String^);					//Permet de supprimer des lignes d'une tabele
+		void updateRows(String^);					//Permet de modifier les lignes d'une table
 	};
 }
