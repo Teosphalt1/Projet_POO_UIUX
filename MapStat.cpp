@@ -48,7 +48,7 @@ String^ NS_Comp_Mappage::MapStat::STAT9(void)
 
 String^ NS_Comp_Mappage::MapStat::SELECT(void)
 {
-	return "SELECT * FROM Stats";
+	return "SELECT stock_value, tva, margin, discount, uknown_brand, result FROM Stats";
 }
 
 void NS_Comp_Mappage::MapStat::setStock_value(float stock_value)
